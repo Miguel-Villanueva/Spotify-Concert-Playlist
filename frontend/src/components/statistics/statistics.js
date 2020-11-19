@@ -10,7 +10,7 @@ const Statistics = () => {
   const [loading, setLoading] = useState(true);
 
   const getMostSearchedArtists = async () => {
-    await Axios.get(`http://localhost:8888/get_artists`)
+    await Axios.get(`http://3.139.102.236:8888/get_artists`)
       .then((res) => {
         setMostSearchedArtists(res.data);
         console.log(res.data)
@@ -24,7 +24,7 @@ const Statistics = () => {
   };
 
   const getMostSearchedZipcodes = async () => {
-    await Axios.get(`http://localhost:8888/get_zipcodes`)
+    await Axios.get(`http://3.139.102.236:8888/get_zipcodes`)
       .then((res) => {
         setMostSearchedZipcodes(res.data);
         console.log(res.data)

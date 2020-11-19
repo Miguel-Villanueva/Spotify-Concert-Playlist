@@ -3,7 +3,7 @@ import { encode } from './encoder';
 import base64 from 'base-64';
 
 export const checkIfRefreshTokenWorking = (refresh_token) => new Promise((resolve, reject) => {
-  fetch('http://localhost:8888/refresh_token?refresh_token='+refresh_token)
+  fetch('http://3.139.102.236:8888/refresh_token?refresh_token='+refresh_token)
   .then(response => {
     resolve(true)
   })
@@ -25,7 +25,7 @@ export const checkIfTokenActive = (decryptedToken, spotifyInstance) => new Promi
 })
 
 export const generateNewAccessToken = (refresh_token) => new Promise((resolve, reject) => {
-  fetch('http://localhost:8888/refresh_token?refresh_token='+refresh_token)
+  fetch('http://3.139.102.236:8888/refresh_token?refresh_token='+refresh_token)
   .then(response => response.json())
   .catch(err => {
     reject(false)

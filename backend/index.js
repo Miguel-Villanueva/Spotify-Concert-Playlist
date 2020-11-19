@@ -6,7 +6,7 @@
  * For more information, read
  * https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow
  */
-
+require('dotenv').config()
 var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
 var cors = require('cors');
@@ -15,16 +15,16 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser')
 var ticketmasterRouter = require("./ticketmasterAPI");
 
-var client_id = ''; // Your client id
-var client_secret = ''; // Your secret
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+var client_id = process.env.SPOTIFY_ID; // Your client id
+var client_secret = process.env.SPOTIFY_SECRET; // Your secret
+var redirect_uri = 'http://3.139.102.236:8888/callback'; // Your redirect uri
 
 
 var jsonParser = bodyParser.json() // create application/json parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false }) // create application/x-www-form-urlencoded parser
 
 const mysql = require('mysql');
-require('dotenv').config()
+
 
 const con = mysql.createConnection({
   host: process.env.DB_HOST,

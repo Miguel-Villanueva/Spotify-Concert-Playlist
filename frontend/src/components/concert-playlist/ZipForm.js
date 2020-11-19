@@ -27,7 +27,7 @@ export default class ZipForm extends Component {
   }
 
   updateDB = async(zipcode) => {
-    await Axios.post(`http://localhost:8888/insert_zipcode`,{
+    await Axios.post(`http://3.139.102.236:8888/insert_zipcode`,{
       zip_code: zipcode
     })
     .then((res) => {

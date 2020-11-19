@@ -1,9 +1,9 @@
 import React from 'react';
 import Iframe from 'react-iframe'
 
-const EmbeddedPlaylist = (props) => {
+const EmbeddedConcertPlaylist = (props) => {
     return(
-        <div id="iframe-container">
+        <div id="iframe-concert-container">
                 <Iframe
                     url={props.link}
                     width="350px"
@@ -16,4 +16,4 @@ const EmbeddedPlaylist = (props) => {
     )
 }
 
-export default EmbeddedPlaylist
+export default EmbeddedConcertPlaylist

@@ -37,6 +37,14 @@ h3{
     font-weight: 600;
     border-radius: 7px;
 }
+
+#button-link{
+    height: 45px;
+    background-color: #02FE8F;
+    border-color: white;
+    font-weight: 600;
+    border-radius: 7px;
+}
 #create-button {
     margin-left: 50px;
     height: 45px;
@@ -102,6 +110,11 @@ h3{
 
 #iframe-container {
     margin-left: 340px;
+}
+
+#iframe-concert-container {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #pickArtists .ant-select-selector:hover{
@@ -208,6 +221,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     #iframe-container {
         margin-left: 0px;
     }
+    #iframe-concert-container {
+        margin-left: 0px;
+    }
 
     #playlist-properties {
         margin: auto;
@@ -259,6 +275,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     }
 
     #iframe-container {
+        margin-left: 0px;
+    }
+    #iframe-concert-container {
         margin-left: 0px;
     }
 

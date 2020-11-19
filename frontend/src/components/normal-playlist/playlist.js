@@ -212,7 +212,7 @@ class Playlist extends Component {
   }
 
   updateDB = async (name) => {
-    await Axios.post(`http://localhost:8888/insert_artist`, {
+    await Axios.post(`http://3.139.102.236:8888/insert_artist`, {
         artist_name: name
     })
     .then((res) => {

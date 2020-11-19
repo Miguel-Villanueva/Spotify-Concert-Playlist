@@ -24,7 +24,7 @@ class Genres extends Component {
   }
 
   callAPI(){
-    fetch('http://localhost:8888/ticketmasterAPI?zip='+this.props.zip).then(
+    fetch('http://3.139.102.236:8888/ticketmasterAPI?zip='+this.props.zip).then(
       res => res.json()
     ).then(json => 
       this.setState({
